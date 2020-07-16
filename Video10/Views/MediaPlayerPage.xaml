@@ -13,9 +13,16 @@
         </Grid.RowDefinitions>
 
         <CommandBar Background="Transparent" IsOpen="False" DefaultLabelPosition="Right" HorizontalAlignment="Left">
-            <AppBarButton x:Uid="AppBar_Open_Button" Icon="OpenFile" Click="AppBarButton_Click"/>
-            <AppBarButton x:Uid="AppBar_Exit_Button" Icon="Cancel" Click="AppBarButton_Click_1"/>
-            <AppBarButton x:Name="test" Label="text"/>
+            <AppBarButton x:Uid="AppBar_Open_Button" Icon="OpenFile" Click="AppBarButton_Click">
+                <AppBarButton.KeyboardAccelerators>
+                    <KeyboardAccelerator Modifiers="Control" Key="O"/>
+                </AppBarButton.KeyboardAccelerators>
+            </AppBarButton>
+            <AppBarButton x:Uid="AppBar_Exit_Button" Icon="Cancel" Click="AppBarButton_Click_1">
+                <AppBarButton.KeyboardAccelerators>
+                    <KeyboardAccelerator Modifiers="Control" Key="E"/>
+                </AppBarButton.KeyboardAccelerators>
+            </AppBarButton>
         </CommandBar>
         <MediaPlayerElement
             x:Name="mpe"

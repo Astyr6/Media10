@@ -178,7 +178,7 @@
     <comment>Parameter must be an Enum name in enum to boolean converter</comment>
   </data>
   <data name="AppBar_Exit_Button.Label" xml:space="preserve">
-    <value>Exit</value>
+    <value>Close Media</value>
   </data>
   <data name="AppBar_Open_Button.Label" xml:space="preserve">
     <value>Open</value>

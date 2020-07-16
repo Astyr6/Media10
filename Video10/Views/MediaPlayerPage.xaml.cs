@@ -167,13 +167,11 @@ namespace Video10.Views
 
         private void AppBarButton_Click_1(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
-
+            mpe.MediaPlayer.Source = null;
         }
 
         private void playPause_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
-            test.Label = mpe.MediaPlayer.PlaybackSession.PlaybackState.ToString();
-
             if (Convert.ToString(mpe.MediaPlayer.PlaybackSession.PlaybackState) == "Playing")
                 mpe.MediaPlayer.Pause();
             else
