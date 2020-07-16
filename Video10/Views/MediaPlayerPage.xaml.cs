@@ -207,5 +207,10 @@ namespace Video10.Views
             else
                 mpe.MediaPlayer.IsMuted = true;
         }
+
+        private void escapeFullscreen_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            mpe.IsFullWindow = false;
+        }
     }
 }

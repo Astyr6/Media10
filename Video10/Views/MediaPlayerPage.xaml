@@ -57,5 +57,10 @@
                 <KeyboardAccelerator Key="M"/>
             </Button.KeyboardAccelerators>
         </Button>
+        <Button Visibility="Visible" Background="Transparent" x:Name="escapeFullscreen" Click="escapeFullscreen_Click" Height="0" Width="0" HorizontalAlignment="Right">
+            <Button.KeyboardAccelerators>
+                <KeyboardAccelerator Key="Escape"/>
+            </Button.KeyboardAccelerators>
+        </Button>
     </Grid>
 </Page>
