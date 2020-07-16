@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 using System.Runtime.CompilerServices;
-
+using Windows.ApplicationModel.DataTransfer;
 using Windows.Media.Core;
 using Windows.Media.Playback;
+using Windows.Storage;
 using Windows.System.Display;
 using Windows.UI.Core;
 using Windows.UI.Xaml.Controls;
@@ -211,6 +213,32 @@ namespace Video10.Views
         private void escapeFullscreen_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
             mpe.IsFullWindow = false;
+        }
+
+        private void Grid_DragOver(object sender, Windows.UI.Xaml.DragEventArgs e)
+        {
+            e.DragUIOverride.Caption = "Drop to play";
+            e.AcceptedOperation = DataPackageOperation.Link;
+        }
+
+        private async void Grid_Drop(object sender, Windows.UI.Xaml.DragEventArgs e)
+        {
+            if (e.DataView.Contains(StandardDataFormats.StorageItems))
+            {
+                var items = await e.DataView.GetStorageItemsAsync();
+                if (items.Count == 1)
+                {
+                    var storageFile = items[0] as StorageFile;
+                    string[] allowedTypes = { ".asf", ".wma", ".wmv", ".wm", ".asx", ".wax", ".wvx", ".wmx", ".wpl", ".dvr-ms", ".wmd", ".avi", ".mpg", ".mpeg", ".m1v", ".mp2", ".mp3", ".mpa", ".mpe", ".m3u", ".mid", ".midi", ".rmi", ".aif", ".aifc", ".aiff", ".au", ".snd", ".wav", ".cda", ".ivf", ".m4a", ".mp4", ".m4v", ".mp4v", ".3g2", ".3gp2", ".3gp", ".3gpp", ".aac", ".adt", ".adts", ".m2ts", ".ts", ".flac", ".mkv", ".ogg" };
+                    foreach (string x in allowedTypes)
+                    {
+                        if (storageFile.FileType.Contains(x))
+                        {
+                            mpe.Source = MediaSource.CreateFromStorageFile(storageFile);
+                        }
+                    }
+                }
+            }
         }
     }
 }

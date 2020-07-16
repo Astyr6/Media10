@@ -134,8 +134,15 @@
     <Compile Include="Helpers\EnumToBooleanConverter.cs" />
     <Compile Include="Helpers\NavHelper.cs" />
     <Compile Include="Helpers\SettingsStorageExtensions.cs" />
+    <Compile Include="Models\DragDropCompletedData.cs" />
+    <Compile Include="Models\DragDropData.cs" />
+    <Compile Include="Models\DragDropStartingData.cs" />
     <Compile Include="Services\ActivationService.cs" />
     <Compile Include="Activation\DefaultActivationHandler.cs" />
+    <Compile Include="Services\DragAndDrop\DragDropService.cs" />
+    <Compile Include="Services\DragAndDrop\DropConfiguration.cs" />
+    <Compile Include="Services\DragAndDrop\ListViewDropConfiguration.cs" />
+    <Compile Include="Services\DragAndDrop\VisualDropConfiguration.cs" />
     <Compile Include="Services\NavigationService.cs" />
     <Compile Include="Services\ThemeSelectorService.cs" />
     <Compile Include="Views\MediaPlayerPage.xaml.cs">
@@ -274,6 +281,7 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
