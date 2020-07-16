@@ -266,10 +266,13 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Video10.Core\Video10.Core.csproj">
-      <Project>{D0218F58-CCE3-44EC-A71E-44E5BB2B74CB}</Project>
-      <Name>Video10.Core</Name>
+    <ProjectReference Include="..\Media10.Core\Media10.Core.csproj">
+      <Project>{7bbe3553-7491-40a5-a796-7930c148d104}</Project>
+      <Name>Media10.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
