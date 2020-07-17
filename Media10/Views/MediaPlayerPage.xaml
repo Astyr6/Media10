@@ -138,15 +138,7 @@
                     <StackPanel Orientation="Horizontal">
                         <SymbolIcon Symbol="List" />
                         <TextBlock Text="  Playlist" />
-                        <Button HorizontalAlignment="Right" Style="{StaticResource ButtonRevealStyle}" Grid.Column="1" Margin="260,0,0,0" Click="Button_Click">
-                            <StackPanel Orientation="Horizontal">
-                                <SymbolIcon Symbol="Delete" />
-                                <TextBlock x:Uid="Delete_Button"/>
-                            </StackPanel>
-                            <Button.KeyboardAccelerators>
-                                <KeyboardAccelerator Key="Delete"/>
-                            </Button.KeyboardAccelerators>
-                        </Button>
+                        
                     </StackPanel>
                 </DataTemplate>
             </ContentDialog.TitleTemplate>
@@ -155,24 +147,38 @@
                     x:Name="playlistGrid"
                     MinHeight="400"
                     AllowDrop="True">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    
                     <StackPanel
                         x:Name="DragAndDropPormpt"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
-                        Orientation="Vertical">
+                        Orientation="Vertical" Grid.Row="1">
                         <SymbolIcon Foreground="Gray" Symbol="Add" />
                         <TextBlock
                             x:Uid="DragAndDrop_Textblock"
                             HorizontalAlignment="Center"
                             Foreground="Gray" />
                     </StackPanel>
+                    <Button HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource ButtonRevealStyle}" Click="Button_Click" Grid.Row="0">
+                            <StackPanel Orientation="Horizontal">
+                                <SymbolIcon Symbol="Delete" />
+                                <TextBlock x:Uid="Delete_Button"/>
+                            </StackPanel>
+                            <Button.KeyboardAccelerators>
+                                <KeyboardAccelerator Key="Delete"/>
+                            </Button.KeyboardAccelerators>
+                        </Button>
                     <ListView
                         x:Name="playlistListView"
                         AllowDrop="True"
                         CanDragItems="True"
                         CanReorderItems="True"
-                        DragOver="playlistGrid_DragOver"
-                        Drop="playlistGrid_Drop" />
+                        DragOver="playlistGrid_DragOver" DragLeave="playlistListView_DragLeave"
+                        Drop="playlistGrid_Drop" Grid.Row="1" Margin="0,10,0,0" Background="Transparent"/>
                 </Grid>
             </ScrollViewer>
         </ContentDialog>

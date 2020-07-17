@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Drawing;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using Windows.ApplicationModel.DataTransfer;
@@ -8,9 +9,11 @@ using Windows.Media.Core;
 using Windows.Media.Playback;
 using Windows.Storage;
 using Windows.System.Display;
+using Windows.UI;
 using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 namespace Video10.Views
@@ -238,6 +241,8 @@ namespace Video10.Views
         {
             e.DragUIOverride.Caption = "Drop to play";
             e.AcceptedOperation = DataPackageOperation.Link;
+            SolidColorBrush grayBrush = new SolidColorBrush(Windows.UI.Colors.Gray);
+            playlistListView.Background = grayBrush;
         }
 
         private async void Grid_Drop(object sender, Windows.UI.Xaml.DragEventArgs e)
@@ -317,6 +322,12 @@ namespace Video10.Views
             try { playlistListView.Items.RemoveAt(playlistListView.SelectedIndex); } catch { }
             if (playlistListView.Items.Count == 0)
                 DragAndDropPormpt.Visibility = Visibility.Visible;
+        }
+
+        private void playlistListView_DragLeave(object sender, DragEventArgs e)
+        {
+            SolidColorBrush transparentBrush = new SolidColorBrush(Windows.UI.Colors.Transparent);
+            playlistListView.Background = transparentBrush;
         }
     }
 }

@@ -97,6 +97,10 @@
           <source>Drag files here to add them to the list</source>
           <target state="new">Drag files here to add them to the list</target>
         </trans-unit>
+        <trans-unit id="Delete_Button.Text" translate="yes" xml:space="preserve">
+          <source>Delete selected</source>
+          <target state="new">Delete selected</target>
+        </trans-unit>
       </group>
     </body>
   </file>

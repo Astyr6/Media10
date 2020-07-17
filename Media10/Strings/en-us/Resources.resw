@@ -186,6 +186,9 @@
   <data name="AppBar_Playlist_Button.Label" xml:space="preserve">
     <value>Playlist</value>
   </data>
+  <data name="Delete_Button.Text" xml:space="preserve">
+    <value>Delete selected</value>
+  </data>
   <data name="DragAndDrop_Textblock.Text" xml:space="preserve">
     <value>Drag files here to add them to the list</value>
   </data>
