@@ -183,4 +183,10 @@
   <data name="AppBar_Open_Button.Label" xml:space="preserve">
     <value>Open</value>
   </data>
+  <data name="AppBar_Playlist_Button.Label" xml:space="preserve">
+    <value>Playlist</value>
+  </data>
+  <data name="DragAndDrop_Textblock" xml:space="preserve">
+    <value>Drag files here to add them to the list</value>
+  </data>
 </root>

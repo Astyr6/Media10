@@ -89,6 +89,10 @@
           <source>Open</source>
           <target state="new">Open</target>
         </trans-unit>
+        <trans-unit id="AppBar_Playlist_Button.Label" translate="yes" xml:space="preserve">
+          <source>Playlist</source>
+          <target state="new">Playlist</target>
+        </trans-unit>
       </group>
     </body>
   </file>
