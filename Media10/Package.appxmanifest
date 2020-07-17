@@ -8,15 +8,15 @@
   IgnorableNamespaces="uap mp genTemplate">
 
   <Identity
-    Name="D7A30E8E-E53C-4E7B-AF1F-F691564BAEE7"
-    Publisher="CN=matth"
+    Name="29635Astyr.Media10"
+    Publisher="CN=61188628-CEC2-4729-A177-0BE913180E82"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="D7A30E8E-E53C-4E7B-AF1F-F691564BAEE7" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="259f68bc-7b6f-498f-87b1-0b17976279cb" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>Video10</DisplayName>
-    <PublisherDisplayName>matth</PublisherDisplayName>
+    <DisplayName>Media10</DisplayName>
+    <PublisherDisplayName>Astyr</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
