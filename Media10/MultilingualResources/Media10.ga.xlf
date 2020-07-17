@@ -93,6 +93,10 @@
           <source>Playlist</source>
           <target state="new">Playlist</target>
         </trans-unit>
+        <trans-unit id="DragAndDrop_Textblock.Text" translate="yes" xml:space="preserve">
+          <source>Drag files here to add them to the list</source>
+          <target state="new">Drag files here to add them to the list</target>
+        </trans-unit>
       </group>
     </body>
   </file>

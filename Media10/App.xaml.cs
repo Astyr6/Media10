@@ -9,12 +9,9 @@ namespace Video10
 {
     public sealed partial class App : Application
     {
-        private Lazy<ActivationService> _activationService;
+        private readonly Lazy<ActivationService> _activationService;
 
-        private ActivationService ActivationService
-        {
-            get { return _activationService.Value; }
-        }
+        private ActivationService ActivationService => _activationService.Value;
 
         public App()
         {

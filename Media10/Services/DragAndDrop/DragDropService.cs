@@ -10,13 +10,13 @@ namespace Media10.Services.DragAndDrop
     // For instructions on testing this service see https://github.com/Microsoft/WindowsTemplateStudio/blob/release/docs/UWP/features/drag-and-drop.md
     public class DragDropService
     {
-        private static DependencyProperty configurationProperty = DependencyProperty.RegisterAttached(
+        private static readonly DependencyProperty configurationProperty = DependencyProperty.RegisterAttached(
         "Configuration",
         typeof(DropConfiguration),
         typeof(DragDropService),
         new PropertyMetadata(null, OnConfigurationPropertyChanged));
 
-        private static DependencyProperty visualConfigurationProperty = DependencyProperty.RegisterAttached(
+        private static readonly DependencyProperty visualConfigurationProperty = DependencyProperty.RegisterAttached(
         "VisualConfiguration",
         typeof(VisualDropConfiguration),
         typeof(DragDropService),
@@ -50,12 +50,12 @@ namespace Media10.Services.DragAndDrop
 
         private static void OnConfigurationPropertyChanged(DependencyObject dependencyObject, DependencyPropertyChangedEventArgs e)
         {
-            var element = dependencyObject as UIElement;
-            var configuration = GetConfiguration(element);
+            UIElement element = dependencyObject as UIElement;
+            DropConfiguration configuration = GetConfiguration(element);
             ConfigureUIElement(element, configuration);
 
-            var listview = element as ListViewBase;
-            var listviewconfig = configuration as ListViewDropConfiguration;
+            ListViewBase listview = element as ListViewBase;
+            ListViewDropConfiguration listviewconfig = configuration as ListViewDropConfiguration;
             if (listview != null && listviewconfig != null)
             {
                 ConfigureListView(listview, listviewconfig);
@@ -69,21 +69,21 @@ namespace Media10.Services.DragAndDrop
                 // Operation is copy by default
                 args.AcceptedOperation = DataPackageOperation.Copy;
 
-                var data = new DragDropData { AcceptedOperation = args.AcceptedOperation, DataView = args.DataView };
+                DragDropData data = new DragDropData { AcceptedOperation = args.AcceptedOperation, DataView = args.DataView };
                 configuration.DragEnterAction?.Invoke(data);
                 args.AcceptedOperation = data.AcceptedOperation;
             };
 
             element.DragOver += (sender, args) =>
             {
-                var data = new DragDropData { AcceptedOperation = args.AcceptedOperation, DataView = args.DataView };
+                DragDropData data = new DragDropData { AcceptedOperation = args.AcceptedOperation, DataView = args.DataView };
                 configuration.DragOverAction?.Invoke(data);
                 args.AcceptedOperation = data.AcceptedOperation;
             };
 
             element.DragLeave += (sender, args) =>
             {
-                var data = new DragDropData { AcceptedOperation = args.AcceptedOperation, DataView = args.DataView };
+                DragDropData data = new DragDropData { AcceptedOperation = args.AcceptedOperation, DataView = args.DataView };
                 configuration.DragLeaveAction?.Invoke(data);
             };
 
@@ -97,21 +97,21 @@ namespace Media10.Services.DragAndDrop
         {
             listview.DragItemsStarting += (sender, args) =>
             {
-                var data = new DragDropStartingData { Data = args.Data, Items = args.Items };
+                DragDropStartingData data = new DragDropStartingData { Data = args.Data, Items = args.Items };
                 configuration.DragItemsStartingAction?.Invoke(data);
             };
 
             listview.DragItemsCompleted += (sender, args) =>
             {
-                var data = new DragDropCompletedData { DropResult = args.DropResult, Items = args.Items };
+                DragDropCompletedData data = new DragDropCompletedData { DropResult = args.DropResult, Items = args.Items };
                 configuration.DragItemsCompletedAction?.Invoke(data);
             };
         }
 
         private static void OnVisualConfigurationPropertyChanged(DependencyObject dependencyObject, DependencyPropertyChangedEventArgs e)
         {
-            var element = dependencyObject as UIElement;
-            var configuration = GetVisualConfiguration(element);
+            UIElement element = dependencyObject as UIElement;
+            VisualDropConfiguration configuration = GetVisualConfiguration(element);
 
             element.DragStarting += (sender, args) =>
             {

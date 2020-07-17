@@ -29,14 +29,14 @@ namespace Video10.Views
 
         public bool IsBackEnabled
         {
-            get { return _isBackEnabled; }
-            set { Set(ref _isBackEnabled, value); }
+            get => _isBackEnabled;
+            set => Set(ref _isBackEnabled, value);
         }
 
         public WinUI.NavigationViewItem Selected
         {
-            get { return _selected; }
-            set { Set(ref _selected, value); }
+            get => _selected;
+            set => Set(ref _selected, value);
         }
 
         public ShellPage()
@@ -77,7 +77,7 @@ namespace Video10.Views
                 return;
             }
 
-            var selectedItem = GetSelectedItem(navigationView.MenuItems, e.SourcePageType);
+            WinUI.NavigationViewItem selectedItem = GetSelectedItem(navigationView.MenuItems, e.SourcePageType);
             if (selectedItem != null)
             {
                 Selected = selectedItem;
@@ -86,14 +86,14 @@ namespace Video10.Views
 
         private WinUI.NavigationViewItem GetSelectedItem(IEnumerable<object> menuItems, Type pageType)
         {
-            foreach (var item in menuItems.OfType<WinUI.NavigationViewItem>())
+            foreach (WinUI.NavigationViewItem item in menuItems.OfType<WinUI.NavigationViewItem>())
             {
                 if (IsMenuItemForPageType(item, pageType))
                 {
                     return item;
                 }
 
-                var selectedChild = GetSelectedItem(item.MenuItems, pageType);
+                WinUI.NavigationViewItem selectedChild = GetSelectedItem(item.MenuItems, pageType);
                 if (selectedChild != null)
                 {
                     return selectedChild;
@@ -105,7 +105,7 @@ namespace Video10.Views
 
         private bool IsMenuItemForPageType(WinUI.NavigationViewItem menuItem, Type sourcePageType)
         {
-            var pageType = menuItem.GetValue(NavHelper.NavigateToProperty) as Type;
+            Type pageType = menuItem.GetValue(NavHelper.NavigateToProperty) as Type;
             return pageType == sourcePageType;
         }
 
@@ -119,7 +119,7 @@ namespace Video10.Views
 
             if (args.InvokedItemContainer is WinUI.NavigationViewItem selectedItem)
             {
-                var pageType = selectedItem.GetValue(NavHelper.NavigateToProperty) as Type;
+                Type pageType = selectedItem.GetValue(NavHelper.NavigateToProperty) as Type;
                 NavigationService.Navigate(pageType, null, args.RecommendedNavigationTransitionInfo);
             }
         }
@@ -131,7 +131,7 @@ namespace Video10.Views
 
         private static KeyboardAccelerator BuildKeyboardAccelerator(VirtualKey key, VirtualKeyModifiers? modifiers = null)
         {
-            var keyboardAccelerator = new KeyboardAccelerator() { Key = key };
+            KeyboardAccelerator keyboardAccelerator = new KeyboardAccelerator() { Key = key };
             if (modifiers.HasValue)
             {
                 keyboardAccelerator.Modifiers = modifiers.Value;
@@ -143,13 +143,13 @@ namespace Video10.Views
 
         private static void OnKeyboardAcceleratorInvoked(KeyboardAccelerator sender, KeyboardAcceleratorInvokedEventArgs args)
         {
-            var result = NavigationService.GoBack();
+            bool result = NavigationService.GoBack();
             args.Handled = result;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private void Set<T>(ref T storage, T value, [CallerMemberName]string propertyName = null)
+        private void Set<T>(ref T storage, T value, [CallerMemberName] string propertyName = null)
         {
             if (Equals(storage, value))
             {
@@ -160,6 +160,9 @@ namespace Video10.Views
             OnPropertyChanged(propertyName);
         }
 
-        private void OnPropertyChanged(string propertyName) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        private void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
 }

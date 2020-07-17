@@ -16,14 +16,14 @@ namespace Media10.Services.DragAndDrop
 
         public Action<DragDropStartingData> DragItemsStartingAction
         {
-            get { return (Action<DragDropStartingData>)GetValue(DragItemsStartingActionProperty); }
-            set { SetValue(DragItemsStartingActionProperty, value); }
+            get => (Action<DragDropStartingData>)GetValue(DragItemsStartingActionProperty);
+            set => SetValue(DragItemsStartingActionProperty, value);
         }
 
         public Action<DragDropCompletedData> DragItemsCompletedAction
         {
-            get { return (Action<DragDropCompletedData>)GetValue(DragItemsCompletedActionProperty); }
-            set { SetValue(DragItemsCompletedActionProperty, value); }
+            get => (Action<DragDropCompletedData>)GetValue(DragItemsCompletedActionProperty);
+            set => SetValue(DragItemsCompletedActionProperty, value);
         }
     }
 }

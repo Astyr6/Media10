@@ -31,7 +31,7 @@ namespace Video10.Services
 
         public static async Task SetRequestedThemeAsync()
         {
-            foreach (var view in CoreApplication.Views)
+            foreach (CoreApplicationView view in CoreApplication.Views)
             {
                 await view.Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
                 {

@@ -9,9 +9,8 @@ using Windows.Media.Playback;
 using Windows.Storage;
 using Windows.System.Display;
 using Windows.UI.Core;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 namespace Video10.Views
@@ -19,7 +18,7 @@ namespace Video10.Views
     public sealed partial class MediaPlayerPage : Page, INotifyPropertyChanged
     {
         // The DisplayRequest is used to stop the screen dimming while watching for extended periods
-        private DisplayRequest _displayRequest = new DisplayRequest();
+        private readonly DisplayRequest _displayRequest = new DisplayRequest();
         private bool _isRequestActive = false;
 
         public MediaPlayerPage()
@@ -38,7 +37,7 @@ namespace Video10.Views
             base.OnNavigatedFrom(e);
             mpe.MediaPlayer.Pause();
             mpe.MediaPlayer.PlaybackSession.PlaybackStateChanged -= PlaybackSession_PlaybackStateChanged;
-            var mediaSource = mpe.Source as MediaSource;
+            MediaSource mediaSource = mpe.Source as MediaSource;
             mediaSource?.Dispose();
             mpe.Source = null;
         }
@@ -74,7 +73,7 @@ namespace Video10.Views
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private void Set<T>(ref T storage, T value, [CallerMemberName]string propertyName = null)
+        private void Set<T>(ref T storage, T value, [CallerMemberName] string propertyName = null)
         {
             if (Equals(storage, value))
             {
@@ -85,13 +84,18 @@ namespace Video10.Views
             OnPropertyChanged(propertyName);
         }
 
-        private void OnPropertyChanged(string propertyName) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        private void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
 
         private async void AppBarButton_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
-            var picker = new Windows.Storage.Pickers.FileOpenPicker();
-            picker.ViewMode = Windows.Storage.Pickers.PickerViewMode.Thumbnail;
-            picker.SuggestedStartLocation = Windows.Storage.Pickers.PickerLocationId.VideosLibrary;
+            Windows.Storage.Pickers.FileOpenPicker picker = new Windows.Storage.Pickers.FileOpenPicker
+            {
+                ViewMode = Windows.Storage.Pickers.PickerViewMode.Thumbnail,
+                SuggestedStartLocation = Windows.Storage.Pickers.PickerLocationId.VideosLibrary
+            };
 
             picker.FileTypeFilter.Add(".asf");
             picker.FileTypeFilter.Add(".wma");
@@ -160,10 +164,11 @@ namespace Video10.Views
 
             try
             {
-            Windows.Storage.StorageFile file = await picker.PickSingleFileAsync();
+                Windows.Storage.StorageFile file = await picker.PickSingleFileAsync();
 
-            mpe.Source = MediaSource.CreateFromStorageFile(file);
-            } catch { }
+                mpe.Source = MediaSource.CreateFromStorageFile(file);
+            }
+            catch { }
 
         }
 
@@ -175,17 +180,25 @@ namespace Video10.Views
         private void playPause_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
             if (Convert.ToString(mpe.MediaPlayer.PlaybackSession.PlaybackState) == "Playing")
+            {
                 mpe.MediaPlayer.Pause();
+            }
             else
+            {
                 mpe.MediaPlayer.Play();
+            }
         }
 
         private void fullScreen_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
             if (mpe.IsFullWindow)
+            {
                 mpe.IsFullWindow = false;
+            }
             else
+            {
                 mpe.IsFullWindow = true;
+            }
         }
 
         private void VolumeDown_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
@@ -199,15 +212,21 @@ namespace Video10.Views
         private void VolumeUp_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
             if (!(mpe.MediaPlayer.Volume == 1))
+            {
                 mpe.MediaPlayer.Volume = mpe.MediaPlayer.Volume + 0.01;
+            }
         }
 
         private void VolumeMute_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
             if (mpe.MediaPlayer.IsMuted)
+            {
                 mpe.MediaPlayer.IsMuted = false;
+            }
             else
+            {
                 mpe.MediaPlayer.IsMuted = true;
+            }
         }
 
         private void escapeFullscreen_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
@@ -225,10 +244,10 @@ namespace Video10.Views
         {
             if (e.DataView.Contains(StandardDataFormats.StorageItems))
             {
-                var items = await e.DataView.GetStorageItemsAsync();
+                IReadOnlyList<IStorageItem> items = await e.DataView.GetStorageItemsAsync();
                 if (items.Count == 1)
                 {
-                    var storageFile = items[0] as StorageFile;
+                    StorageFile storageFile = items[0] as StorageFile;
                     string[] allowedTypes = { ".asf", ".wma", ".wmv", ".wm", ".asx", ".wax", ".wvx", ".wmx", ".wpl", ".dvr-ms", ".wmd", ".avi", ".mpg", ".mpeg", ".m1v", ".mp2", ".mp3", ".mpa", ".mpe", ".m3u", ".mid", ".midi", ".rmi", ".aif", ".aifc", ".aiff", ".au", ".snd", ".wav", ".cda", ".ivf", ".m4a", ".mp4", ".m4v", ".mp4v", ".3g2", ".3gp2", ".3gp", ".3gpp", ".aac", ".adt", ".adts", ".m2ts", ".ts", ".flac", ".mkv", ".ogg" };
                     foreach (string x in allowedTypes)
                     {
@@ -239,6 +258,65 @@ namespace Video10.Views
                     }
                 }
             }
+        }
+
+        private readonly string[] playlist = { };
+
+        private async void AppBarButton_Click_2(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            await playlistDialog.ShowAsync();
+        }
+
+        private void playlistGrid_DragOver(object sender, Windows.UI.Xaml.DragEventArgs e)
+        {
+            e.DragUIOverride.Caption = "Drop to add to the playlist";
+            e.AcceptedOperation = DataPackageOperation.Link;
+        }
+
+        private async void playlistGrid_Drop(object sender, Windows.UI.Xaml.DragEventArgs e)
+        {
+            if (e.DataView.Contains(StandardDataFormats.StorageItems))
+            {
+                IReadOnlyList<IStorageItem> items = await e.DataView.GetStorageItemsAsync();
+                foreach (IStorageItem items1 in items)
+                {
+                    if (items.Count > 0)
+                    {
+                        StorageFile storageFile = items1 as StorageFile;
+                        string[] allowedTypes = { ".asf", ".wma", ".wmv", ".wm", ".asx", ".wax", ".wvx", ".wmx", ".wpl", ".dvr-ms", ".wmd", ".avi", ".mpg", ".mpeg", ".m1v", ".mp2", ".mp3", ".mpa", ".mpe", ".m3u", ".mid", ".midi", ".rmi", ".aif", ".aifc", ".aiff", ".au", ".snd", ".wav", ".cda", ".ivf", ".m4a", ".mp4", ".m4v", ".mp4v", ".3g2", ".3gp2", ".3gp", ".3gpp", ".aac", ".adt", ".adts", ".m2ts", ".ts", ".flac", ".mkv", ".ogg" };
+                        foreach (string x in allowedTypes)
+                        {
+                            if (storageFile.FileType.Contains(x))
+                            {
+                                playlistListView.Items.Add(storageFile.Name);
+                                playlist.Append(storageFile.Path);
+                            }
+                        }
+                    }
+
+                    if (playlistListView.Items.Count > 0)
+                    {
+                        DragAndDropPormpt.Visibility = Visibility.Collapsed;
+                    }
+                    else if (playlistListView.Items.Count == 0)
+                        DragAndDropPormpt.Visibility = Visibility.Visible;
+                }
+
+            }
+        }
+
+
+        public class CustomItem
+        {
+            public string FileName { get; set; }
+            public string FilePath { get; set; }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            try { playlistListView.Items.RemoveAt(playlistListView.SelectedIndex); } catch { }
+            if (playlistListView.Items.Count == 0)
+                DragAndDropPormpt.Visibility = Visibility.Visible;
         }
     }
 }

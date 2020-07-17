@@ -48,68 +48,68 @@ namespace Media10.Services.DragAndDrop
 
         public Action<RandomAccessStreamReference> DropBitmapAction
         {
-            get { return (Action<RandomAccessStreamReference>)GetValue(DropBitmapActionProperty); }
-            set { SetValue(DropBitmapActionProperty, value); }
+            get => (Action<RandomAccessStreamReference>)GetValue(DropBitmapActionProperty);
+            set => SetValue(DropBitmapActionProperty, value);
         }
 
         public Action<string> DropHtmlAction
         {
-            get { return (Action<string>)GetValue(DropHtmlActionProperty); }
-            set { SetValue(DropHtmlActionProperty, value); }
+            get => (Action<string>)GetValue(DropHtmlActionProperty);
+            set => SetValue(DropHtmlActionProperty, value);
         }
 
         public Action<string> DropRtfAction
         {
-            get { return (Action<string>)GetValue(DropRtfActionProperty); }
-            set { SetValue(DropRtfActionProperty, value); }
+            get => (Action<string>)GetValue(DropRtfActionProperty);
+            set => SetValue(DropRtfActionProperty, value);
         }
 
         public Action<IReadOnlyList<IStorageItem>> DropStorageItemsAction
         {
-            get { return (Action<IReadOnlyList<IStorageItem>>)GetValue(DropStorageItemsActionProperty); }
-            set { SetValue(DropStorageItemsActionProperty, value); }
+            get => (Action<IReadOnlyList<IStorageItem>>)GetValue(DropStorageItemsActionProperty);
+            set => SetValue(DropStorageItemsActionProperty, value);
         }
 
         public Action<string> DropTextAction
         {
-            get { return (Action<string>)GetValue(DropTextActionProperty); }
-            set { SetValue(DropTextActionProperty, value); }
+            get => (Action<string>)GetValue(DropTextActionProperty);
+            set => SetValue(DropTextActionProperty, value);
         }
 
         public Action<Uri> DropApplicationLinkAction
         {
-            get { return (Action<Uri>)GetValue(DropApplicationLinkActionProperty); }
-            set { SetValue(DropApplicationLinkActionProperty, value); }
+            get => (Action<Uri>)GetValue(DropApplicationLinkActionProperty);
+            set => SetValue(DropApplicationLinkActionProperty, value);
         }
 
         public Action<Uri> DropWebLinkAction
         {
-            get { return (Action<Uri>)GetValue(DropWebLinkActionProperty); }
-            set { SetValue(DropWebLinkActionProperty, value); }
+            get => (Action<Uri>)GetValue(DropWebLinkActionProperty);
+            set => SetValue(DropWebLinkActionProperty, value);
         }
 
         public Action<DataPackageView> DropDataViewAction
         {
-            get { return (Action<DataPackageView>)GetValue(DropDataViewActionProperty); }
-            set { SetValue(DropDataViewActionProperty, value); }
+            get => (Action<DataPackageView>)GetValue(DropDataViewActionProperty);
+            set => SetValue(DropDataViewActionProperty, value);
         }
 
         public Action<DragDropData> DragEnterAction
         {
-            get { return (Action<DragDropData>)GetValue(DragEnterActionProperty); }
-            set { SetValue(DragEnterActionProperty, value); }
+            get => (Action<DragDropData>)GetValue(DragEnterActionProperty);
+            set => SetValue(DragEnterActionProperty, value);
         }
 
         public Action<DragDropData> DragOverAction
         {
-            get { return (Action<DragDropData>)GetValue(DragOverActionProperty); }
-            set { SetValue(DragOverActionProperty, value); }
+            get => (Action<DragDropData>)GetValue(DragOverActionProperty);
+            set => SetValue(DragOverActionProperty, value);
         }
 
         public Action<DragDropData> DragLeaveAction
         {
-            get { return (Action<DragDropData>)GetValue(DragLeaveActionProperty); }
-            set { SetValue(DragLeaveActionProperty, value); }
+            get => (Action<DragDropData>)GetValue(DragLeaveActionProperty);
+            set => SetValue(DragLeaveActionProperty, value);
         }
 
         public async Task ProcessComandsAsync(DataPackageView dataview)

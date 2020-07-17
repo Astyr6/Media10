@@ -25,38 +25,38 @@ namespace Media10.Services.DragAndDrop
 
         public string Caption
         {
-            get { return (string)GetValue(CaptionProperty); }
-            set { SetValue(CaptionProperty, value); }
+            get => (string)GetValue(CaptionProperty);
+            set => SetValue(CaptionProperty, value);
         }
 
         public bool IsCaptionVisible
         {
-            get { return (bool)GetValue(IsCaptionVisibleProperty); }
-            set { SetValue(IsCaptionVisibleProperty, value); }
+            get => (bool)GetValue(IsCaptionVisibleProperty);
+            set => SetValue(IsCaptionVisibleProperty, value);
         }
 
         public bool IsContentVisible
         {
-            get { return (bool)GetValue(IsContentVisibleProperty); }
-            set { SetValue(IsContentVisibleProperty, value); }
+            get => (bool)GetValue(IsContentVisibleProperty);
+            set => SetValue(IsContentVisibleProperty, value);
         }
 
         public bool IsGlyphVisible
         {
-            get { return (bool)GetValue(IsGlyphVisibleProperty); }
-            set { SetValue(IsGlyphVisibleProperty, value); }
+            get => (bool)GetValue(IsGlyphVisibleProperty);
+            set => SetValue(IsGlyphVisibleProperty, value);
         }
 
         public ImageSource DragStartingImage
         {
-            get { return (ImageSource)GetValue(DragStartingImageProperty); }
-            set { SetValue(DragStartingImageProperty, value); }
+            get => (ImageSource)GetValue(DragStartingImageProperty);
+            set => SetValue(DragStartingImageProperty, value);
         }
 
         public ImageSource DropOverImage
         {
-            get { return (ImageSource)GetValue(DropOverImageProperty); }
-            set { SetValue(DropOverImageProperty, value); }
+            get => (ImageSource)GetValue(DropOverImageProperty);
+            set => SetValue(DropOverImageProperty, value);
         }
     }
 }

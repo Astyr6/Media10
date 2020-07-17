@@ -17,7 +17,7 @@ namespace Video10.Services
     {
         private readonly App _app;
         private readonly Type _defaultNavItem;
-        private Lazy<UIElement> _shell;
+        private readonly Lazy<UIElement> _shell;
 
         private object _lastActivationArgs;
 
@@ -67,7 +67,7 @@ namespace Video10.Services
 
         private async Task HandleActivationAsync(object activationArgs)
         {
-            var activationHandler = GetActivationHandlers()
+            ActivationHandler activationHandler = GetActivationHandlers()
                                                 .FirstOrDefault(h => h.CanHandle(activationArgs));
 
             if (activationHandler != null)
@@ -77,7 +77,7 @@ namespace Video10.Services
 
             if (IsInteractive(activationArgs))
             {
-                var defaultHandler = new DefaultActivationHandler(_defaultNavItem);
+                DefaultActivationHandler defaultHandler = new DefaultActivationHandler(_defaultNavItem);
                 if (defaultHandler.CanHandle(activationArgs))
                 {
                     await defaultHandler.HandleAsync(activationArgs);
