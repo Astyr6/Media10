@@ -12,4 +12,90 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Shell_MediaPlayer.Content" xml:space="preserve">
+    <value>メディア プレーヤー</value>
+    <comment>Navigation view item name for MediaPlayer</comment>
+  </data>
+  <data name="ExceptionSettingsStorageExtensionsFileNameIsNullOrEmpty" xml:space="preserve">
+    <value>ファイル名が NULL または空です。有効なファイル名を指定してください</value>
+    <comment>File name is null or empty to save file in settings storage extensions</comment>
+  </data>
+  <data name="Settings_Theme.Text" xml:space="preserve">
+    <value>テーマの選択</value>
+    <comment>Choose theme text for Settings</comment>
+  </data>
+  <data name="Settings_Theme_Dark.Content" xml:space="preserve">
+    <value>暗い</value>
+    <comment>Dark theme text for Settings</comment>
+  </data>
+  <data name="Settings_Theme_Default.Content" xml:space="preserve">
+    <value>Windows 既定</value>
+    <comment>Windows default theme text for Settings</comment>
+  </data>
+  <data name="Settings_Theme_Light.Content" xml:space="preserve">
+    <value>簡易</value>
+    <comment>Light theme text for Settings</comment>
+  </data>
+  <data name="Settings_About.Text" xml:space="preserve">
+    <value>このアプリケーションの情報</value>
+    <comment>About this application title for Settings</comment>
+  </data>
+  <data name="Settings_AboutDescription.Text" xml:space="preserve">
+    <value>Media10は、45以上のファイル形式をサポートする軽量メディアプレーヤーです。</value>
+    <comment>About this application description for Settings</comment>
+  </data>
+  <data name="Settings_Personalization.Text" xml:space="preserve">
+    <value>個人用設定</value>
+    <comment>Personalization text for Settings</comment>
+  </data>
+  <data name="ExceptionEnumToBooleanConverterValueMustBeAnEnum" xml:space="preserve">
+    <value>値は列挙型でなければなりません!</value>
+    <comment>Value must be an Enum in enum to boolean converter</comment>
+  </data>
+  <data name="ExceptionEnumToBooleanConverterParameterMustBeAnEnumName" xml:space="preserve">
+    <value>パラメータは列挙名でなければなりません!</value>
+    <comment>Parameter must be an Enum name in enum to boolean converter</comment>
+  </data>
+  <data name="AppBar_Exit_Button.Label" xml:space="preserve">
+    <value>メディアを閉じる</value>
+  </data>
+  <data name="AppBar_Open_Button.Label" xml:space="preserve">
+    <value>開く</value>
+  </data>
+  <data name="AppBar_Playlist_Button.Label" xml:space="preserve">
+    <value>プレイリスト</value>
+  </data>
+  <data name="DragAndDrop_Textblock.Text" xml:space="preserve">
+    <value>ここにファイルをドラッグしてリストに追加します。</value>
+  </data>
+  <data name="Delete_Button.Text" xml:space="preserve">
+    <value>選択した項目の削除</value>
+  </data>
+  <data name="Settings_GithubDescription.Text" xml:space="preserve">
+    <value>このプロジェクトはオープンソースであり、GitHubで見つけることができます。</value>
+  </data>
+  <data name="Settings_GitHubLink.NavigateUri" xml:space="preserve">
+    <value>https://github.com/Astyr6/Media10</value>
+  </data>
+  <data name="Settings_GitHubLink.Content" xml:space="preserve">
+    <value>GitHub ページ</value>
+  </data>
+  <data name="AppBar_Back_Button.Label" xml:space="preserve">
+    <value>前へ</value>
+  </data>
+  <data name="AppBar_Next_Button.Label" xml:space="preserve">
+    <value>次へ</value>
+  </data>
+  <data name="AppBar_Repeat_Button.Label" xml:space="preserve">
+    <value>繰り返し</value>
+  </data>
+  <data name="AppBar_Shuffle_Button.Label" xml:space="preserve">
+    <value>シャッフル</value>
+  </data>
+  <data name="Clear_Playlist_Button.Text" xml:space="preserve">
+    <value>プレイリストをクリアする</value>
+  </data>
+  <data name="Open_File_Button.Text" xml:space="preserve">
+    <value>ファイルを開く</value>
+  </data>
 </root>

@@ -12,4 +12,90 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Shell_MediaPlayer.Content" xml:space="preserve">
+    <value>Medieafspiller</value>
+    <comment>Navigation view item name for MediaPlayer</comment>
+  </data>
+  <data name="ExceptionSettingsStorageExtensionsFileNameIsNullOrEmpty" xml:space="preserve">
+    <value>Filnavnet er null eller tomt. Angive et gyldigt filnavn</value>
+    <comment>File name is null or empty to save file in settings storage extensions</comment>
+  </data>
+  <data name="Settings_Theme.Text" xml:space="preserve">
+    <value>Vælg designskabelon</value>
+    <comment>Choose theme text for Settings</comment>
+  </data>
+  <data name="Settings_Theme_Dark.Content" xml:space="preserve">
+    <value>Mørk</value>
+    <comment>Dark theme text for Settings</comment>
+  </data>
+  <data name="Settings_Theme_Default.Content" xml:space="preserve">
+    <value>Windows-standard</value>
+    <comment>Windows default theme text for Settings</comment>
+  </data>
+  <data name="Settings_Theme_Light.Content" xml:space="preserve">
+    <value>Lys</value>
+    <comment>Light theme text for Settings</comment>
+  </data>
+  <data name="Settings_About.Text" xml:space="preserve">
+    <value>Om dette program</value>
+    <comment>About this application title for Settings</comment>
+  </data>
+  <data name="Settings_AboutDescription.Text" xml:space="preserve">
+    <value>Media10, en letvægts medieafspiller, der understøtter 45+ filformater.</value>
+    <comment>About this application description for Settings</comment>
+  </data>
+  <data name="Settings_Personalization.Text" xml:space="preserve">
+    <value>Personlig tilpasning</value>
+    <comment>Personalization text for Settings</comment>
+  </data>
+  <data name="ExceptionEnumToBooleanConverterValueMustBeAnEnum" xml:space="preserve">
+    <value>værdien skal være en Enum!</value>
+    <comment>Value must be an Enum in enum to boolean converter</comment>
+  </data>
+  <data name="ExceptionEnumToBooleanConverterParameterMustBeAnEnumName" xml:space="preserve">
+    <value>parameteren skal være et Enum-navn!</value>
+    <comment>Parameter must be an Enum name in enum to boolean converter</comment>
+  </data>
+  <data name="AppBar_Exit_Button.Label" xml:space="preserve">
+    <value>Luk medier</value>
+  </data>
+  <data name="AppBar_Open_Button.Label" xml:space="preserve">
+    <value>Åbn</value>
+  </data>
+  <data name="AppBar_Playlist_Button.Label" xml:space="preserve">
+    <value>Afspilningsliste</value>
+  </data>
+  <data name="DragAndDrop_Textblock.Text" xml:space="preserve">
+    <value>Træk filer hertil for at føje dem til listen</value>
+  </data>
+  <data name="Delete_Button.Text" xml:space="preserve">
+    <value>Slet valgte</value>
+  </data>
+  <data name="Settings_GithubDescription.Text" xml:space="preserve">
+    <value>Dette projekt er open source og kan findes på GitHub.</value>
+  </data>
+  <data name="Settings_GitHubLink.NavigateUri" xml:space="preserve">
+    <value>https://github.com/Astyr6/Media10</value>
+  </data>
+  <data name="Settings_GitHubLink.Content" xml:space="preserve">
+    <value>GitHub-side</value>
+  </data>
+  <data name="AppBar_Back_Button.Label" xml:space="preserve">
+    <value>Forrige</value>
+  </data>
+  <data name="AppBar_Next_Button.Label" xml:space="preserve">
+    <value>Næste&gt;</value>
+  </data>
+  <data name="AppBar_Repeat_Button.Label" xml:space="preserve">
+    <value>Gentag</value>
+  </data>
+  <data name="AppBar_Shuffle_Button.Label" xml:space="preserve">
+    <value>Bland</value>
+  </data>
+  <data name="Clear_Playlist_Button.Text" xml:space="preserve">
+    <value>Ryd afspilningsliste</value>
+  </data>
+  <data name="Open_File_Button.Text" xml:space="preserve">
+    <value> Åbn fil</value>
+  </data>
 </root>

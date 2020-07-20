@@ -12,4 +12,90 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Shell_MediaPlayer.Content" xml:space="preserve">
+    <value>Seinnteoir Meán</value>
+    <comment>Navigation view item name for MediaPlayer</comment>
+  </data>
+  <data name="ExceptionSettingsStorageExtensionsFileNameIsNullOrEmpty" xml:space="preserve">
+    <value>Tá ainm an chomhaid ar neamhní nó folamh. Sonraigh ainm comhaid bhailí</value>
+    <comment>File name is null or empty to save file in settings storage extensions</comment>
+  </data>
+  <data name="Settings_Theme.Text" xml:space="preserve">
+    <value>Roghnaigh teimpléad deartha</value>
+    <comment>Choose theme text for Settings</comment>
+  </data>
+  <data name="Settings_Theme_Dark.Content" xml:space="preserve">
+    <value>Dorcha</value>
+    <comment>Dark theme text for Settings</comment>
+  </data>
+  <data name="Settings_Theme_Default.Content" xml:space="preserve">
+    <value>Réamhshocrú Windows</value>
+    <comment>Windows default theme text for Settings</comment>
+  </data>
+  <data name="Settings_Theme_Light.Content" xml:space="preserve">
+    <value>Éadrom</value>
+    <comment>Light theme text for Settings</comment>
+  </data>
+  <data name="Settings_About.Text" xml:space="preserve">
+    <value>Maidir leis an iarratas seo</value>
+    <comment>About this application title for Settings</comment>
+  </data>
+  <data name="Settings_AboutDescription.Text" xml:space="preserve">
+    <value>Media10, imreoir meáin éadrom-mheáchan a thacaíonn le formáidí comhaid 45 + .</value>
+    <comment>About this application description for Settings</comment>
+  </data>
+  <data name="Settings_Personalization.Text" xml:space="preserve">
+    <value>Pearsanú</value>
+    <comment>Personalization text for Settings</comment>
+  </data>
+  <data name="ExceptionEnumToBooleanConverterValueMustBeAnEnum" xml:space="preserve">
+    <value>luach a bheith ina Enum!</value>
+    <comment>Value must be an Enum in enum to boolean converter</comment>
+  </data>
+  <data name="ExceptionEnumToBooleanConverterParameterMustBeAnEnumName" xml:space="preserve">
+    <value>ní mór paraiméadar a bheith ina ainm Enum!</value>
+    <comment>Parameter must be an Enum name in enum to boolean converter</comment>
+  </data>
+  <data name="AppBar_Exit_Button.Label" xml:space="preserve">
+    <value>Dún na Meáin</value>
+  </data>
+  <data name="AppBar_Open_Button.Label" xml:space="preserve">
+    <value>Oscail</value>
+  </data>
+  <data name="AppBar_Playlist_Button.Label" xml:space="preserve">
+    <value>Seinnliosta</value>
+  </data>
+  <data name="DragAndDrop_Textblock.Text" xml:space="preserve">
+    <value>Tarraing comhaid anseo chun iad a chur leis an liosta</value>
+  </data>
+  <data name="Delete_Button.Text" xml:space="preserve">
+    <value>Scrios roghnaithe</value>
+  </data>
+  <data name="Settings_GithubDescription.Text" xml:space="preserve">
+    <value>Tá an tionscadal seo oscailte agus is féidir é a fháil ar GitHub.</value>
+  </data>
+  <data name="Settings_GitHubLink.NavigateUri" xml:space="preserve">
+    <value>https://github.com/Astyr6/Media10</value>
+  </data>
+  <data name="Settings_GitHubLink.Content" xml:space="preserve">
+    <value>Leathanach GitHub</value>
+  </data>
+  <data name="AppBar_Back_Button.Label" xml:space="preserve">
+    <value>Roimhe</value>
+  </data>
+  <data name="AppBar_Next_Button.Label" xml:space="preserve">
+    <value>Ar aghaidh</value>
+  </data>
+  <data name="AppBar_Repeat_Button.Label" xml:space="preserve">
+    <value>Athsheinn</value>
+  </data>
+  <data name="AppBar_Shuffle_Button.Label" xml:space="preserve">
+    <value>Athsheinn go randamach</value>
+  </data>
+  <data name="Clear_Playlist_Button.Text" xml:space="preserve">
+    <value>Glan an seinmliosta</value>
+  </data>
+  <data name="Open_File_Button.Text" xml:space="preserve">
+    <value> Oscail Comhad</value>
+  </data>
 </root>

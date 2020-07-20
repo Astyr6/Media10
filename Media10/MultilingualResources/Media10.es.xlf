@@ -6,178 +6,126 @@
     </header>
     <body>
       <group id="MEDIA10/STRINGS/EN-US/RESOURCES.RESW" datatype="resx">
-        <trans-unit id="AppDisplayName" translate="yes" xml:space="preserve">
+        <trans-unit id="AppDisplayName" translate="no" xml:space="preserve">
           <source>Media10</source>
-          <target state="new">Media10</target>
+          <target state="final">Media10</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Application display name</note>
         </trans-unit>
-        <trans-unit id="AppDescription" translate="yes" xml:space="preserve">
+        <trans-unit id="AppDescription" translate="no" xml:space="preserve">
           <source>Media10</source>
-          <target state="new">Media10</target>
+          <target state="final">Media10</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Application description</note>
         </trans-unit>
         <trans-unit id="Shell_MediaPlayer.Content" translate="yes" xml:space="preserve">
           <source>Media Player</source>
-          <target state="new">Media Player</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Reproductor multimedia</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Navigation view item name for MediaPlayer</note>
         </trans-unit>
         <trans-unit id="ExceptionSettingsStorageExtensionsFileNameIsNullOrEmpty" translate="yes" xml:space="preserve">
           <source>File name is null or empty. Specify a valid file name</source>
-          <target state="new">File name is null or empty. Specify a valid file name</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">El nombre de archivo es nulo o está vacío. Especifique un nombre de archivo válido</target>
           <note from="MultilingualBuild" annotates="source" priority="2">File name is null or empty to save file in settings storage extensions</note>
         </trans-unit>
         <trans-unit id="Settings_Theme.Text" translate="yes" xml:space="preserve">
           <source>Choose Theme</source>
-          <target state="new">Choose Theme</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Elegir tema</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Choose theme text for Settings</note>
         </trans-unit>
         <trans-unit id="Settings_Theme_Dark.Content" translate="yes" xml:space="preserve">
           <source>Dark</source>
-          <target state="new">Dark</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Oscuro</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Dark theme text for Settings</note>
         </trans-unit>
         <trans-unit id="Settings_Theme_Default.Content" translate="yes" xml:space="preserve">
           <source>Windows default</source>
-          <target state="new">Windows default</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Predeterminado de Windows</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Windows default theme text for Settings</note>
         </trans-unit>
         <trans-unit id="Settings_Theme_Light.Content" translate="yes" xml:space="preserve">
           <source>Light</source>
-          <target state="new">Light</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Claro</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Light theme text for Settings</note>
         </trans-unit>
         <trans-unit id="Settings_About.Text" translate="yes" xml:space="preserve">
           <source>About this application</source>
-          <target state="new">About this application</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Acerca de esta aplicación</target>
           <note from="MultilingualBuild" annotates="source" priority="2">About this application title for Settings</note>
         </trans-unit>
         <trans-unit id="Settings_AboutDescription.Text" translate="yes" xml:space="preserve">
           <source>Media10, a light-weight media player supporting 45+ file formats.</source>
-          <target state="new">Media10, a light-weight media player supporting 45+ file formats.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Media10, un reproductor multimedia ligero que admite más de 45 formatos de archivo.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">About this application description for Settings</note>
         </trans-unit>
         <trans-unit id="Settings_Personalization.Text" translate="yes" xml:space="preserve">
           <source>Personalization</source>
-          <target state="new">Personalization</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Personalización</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Personalization text for Settings</note>
         </trans-unit>
         <trans-unit id="ExceptionEnumToBooleanConverterValueMustBeAnEnum" translate="yes" xml:space="preserve">
           <source>value must be an Enum!</source>
-          <target state="new">value must be an Enum!</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">valor debe ser un Enum!</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Value must be an Enum in enum to boolean converter</note>
         </trans-unit>
         <trans-unit id="ExceptionEnumToBooleanConverterParameterMustBeAnEnumName" translate="yes" xml:space="preserve">
           <source>parameter must be an Enum name!</source>
-          <target state="new">parameter must be an Enum name!</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">parámetro debe ser un nombre Enum!</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Parameter must be an Enum name in enum to boolean converter</note>
         </trans-unit>
         <trans-unit id="AppBar_Exit_Button.Label" translate="yes" xml:space="preserve">
           <source>Close Media</source>
-          <target state="new">Close Media</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Cerrar medios</target>
         </trans-unit>
         <trans-unit id="AppBar_Open_Button.Label" translate="yes" xml:space="preserve">
           <source>Open</source>
-          <target state="new">Open</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Abrir</target>
         </trans-unit>
         <trans-unit id="AppBar_Playlist_Button.Label" translate="yes" xml:space="preserve">
           <source>Playlist</source>
-          <target state="new">Playlist</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Lista de reproducción</target>
         </trans-unit>
         <trans-unit id="DragAndDrop_Textblock.Text" translate="yes" xml:space="preserve">
           <source>Drag files here to add them to the list</source>
-          <target state="new">Drag files here to add them to the list</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Arrastre los archivos aquí para agregarlos a la lista</target>
         </trans-unit>
         <trans-unit id="Delete_Button.Text" translate="yes" xml:space="preserve">
           <source>Delete selected</source>
-          <target state="new">Delete selected</target>
-        </trans-unit>
-        <trans-unit id="FirstRun_Body.Text" translate="yes" xml:space="preserve">
-          <source>Hello user, welcome to Media10, a light-weight media player supporting 45+ file formats.
-More information at https://support.microsoft.com/en-us/help/316992/file-types-supported-by-windows-media-player
-
-This application is based on features request, if you would like any features, go to my GitHub page and make a feature request or leave a comment on the Microsoft Store.
-
-If you like this application, please rate it on the Microsoft Store :)</source>
-          <target state="new">Hello user, welcome to Media10, a light-weight media player supporting 45+ file formats.
-More information at https://support.microsoft.com/en-us/help/316992/file-types-supported-by-windows-media-player
-
-This application is based on features request, if you would like any features, go to my GitHub page and make a feature request or leave a comment on the Microsoft Store.
-
-If you like this application, please rate it on the Microsoft Store :)</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">First use prompt message body</note>
-        </trans-unit>
-        <trans-unit id="FirstRunDialog.Title" translate="yes" xml:space="preserve">
-          <source>Welcome</source>
-          <target state="new">Welcome</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">First use prompt message title</note>
-        </trans-unit>
-        <trans-unit id="FirstRunDialog.PrimaryButtonText" translate="yes" xml:space="preserve">
-          <source>Ok</source>
-          <target state="new">Ok</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">First use prompt message primary button text</note>
-        </trans-unit>
-        <trans-unit id="WhatsNew_Body.Text" translate="yes" xml:space="preserve">
-          <source>This is the first version of Media10, a light-weight media player that supports 45+ file formats.
-
-It includes a playlist system, a drag and drop function so you can directly drop files onto the main screen and a lot of shortcuts.
-
-This application is based on features request, if you would like any features, go to my GitHub page and make a feature request or leave a comment on the Microsoft Store.
-
-If you like this application, please rate it on the Microsoft Store :)</source>
-          <target state="new">This is the first version of Media10, a light-weight media player that supports 45+ file formats.
-
-It includes a playlist system, a drag and drop function so you can directly drop files onto the main screen and a lot of shortcuts.
-
-This application is based on features request, if you would like any features, go to my GitHub page and make a feature request or leave a comment on the Microsoft Store.
-
-If you like this application, please rate it on the Microsoft Store :)</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">What's new prompt message body</note>
-        </trans-unit>
-        <trans-unit id="WhatsNewDialog.Title" translate="yes" xml:space="preserve">
-          <source>What's new in this version</source>
-          <target state="new">What's new in this version</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">What's new prompt message title</note>
-        </trans-unit>
-        <trans-unit id="WhatsNewDialog.PrimaryButtonText" translate="yes" xml:space="preserve">
-          <source>Ok</source>
-          <target state="new">Ok</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">What's new prompt message primary button text</note>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Eliminar selección</target>
         </trans-unit>
         <trans-unit id="Settings_GithubDescription.Text" translate="yes" xml:space="preserve">
           <source>This project is open-source and can be found on GitHub.</source>
-          <target state="new">This project is open-source and can be found on GitHub.</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Este proyecto es de código abierto y se puede encontrar en GitHub.</target>
         </trans-unit>
         <trans-unit id="Settings_GitHubLink.NavigateUri" translate="yes" xml:space="preserve">
           <source>https://github.com/Astyr6/Media10</source>
-          <target state="new">https://github.com/Astyr6/Media10</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">https://github.com/Astyr6/Media10</target>
         </trans-unit>
         <trans-unit id="Settings_GitHubLink.Content" translate="yes" xml:space="preserve">
           <source>GitHub Page</source>
-          <target state="new">GitHub Page</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Página de GitHub</target>
         </trans-unit>
         <trans-unit id="AppBar_Back_Button.Label" translate="yes" xml:space="preserve">
           <source>Previous</source>
-          <target state="new">Previous</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Anterior</target>
         </trans-unit>
         <trans-unit id="AppBar_Next_Button.Label" translate="yes" xml:space="preserve">
           <source>Next</source>
-          <target state="new">Next</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Sig&gt;</target>
         </trans-unit>
         <trans-unit id="AppBar_Repeat_Button.Label" translate="yes" xml:space="preserve">
           <source>Repeat</source>
-          <target state="new">Repeat</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Repetir</target>
         </trans-unit>
         <trans-unit id="AppBar_Shuffle_Button.Label" translate="yes" xml:space="preserve">
           <source>Shuffle</source>
-          <target state="new">Shuffle</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Orden aleatorio</target>
         </trans-unit>
         <trans-unit id="Clear_Playlist_Button.Text" translate="yes" xml:space="preserve">
           <source>Clear playlist</source>
-          <target state="new">Clear playlist</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Borrar lista de reproducción</target>
         </trans-unit>
         <trans-unit id="Open_File_Button.Text" translate="yes" xml:space="preserve">
           <source> Open File</source>
-          <target state="new"> Open File</target>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion"> Abrir archivo</target>
         </trans-unit>
       </group>
     </body>

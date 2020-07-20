@@ -184,41 +184,6 @@
   <data name="DragAndDrop_Textblock.Text" xml:space="preserve">
     <value>Drag files here to add them to the list</value>
   </data>
-  <data name="FirstRun_Body.Text" xml:space="preserve">
-    <value>Hello user, welcome to Media10, a light-weight media player supporting 45+ file formats.
-More information at https://support.microsoft.com/en-us/help/316992/file-types-supported-by-windows-media-player
-
-This application is based on features request, if you would like any features, go to my GitHub page and make a feature request or leave a comment on the Microsoft Store.
-
-If you like this application, please rate it on the Microsoft Store :)</value>
-    <comment>First use prompt message body</comment>
-  </data>
-  <data name="FirstRunDialog.Title" xml:space="preserve">
-    <value>Welcome</value>
-    <comment>First use prompt message title</comment>
-  </data>
-  <data name="FirstRunDialog.PrimaryButtonText" xml:space="preserve">
-    <value>Ok</value>
-    <comment>First use prompt message primary button text</comment>
-  </data>
-  <data name="WhatsNew_Body.Text" xml:space="preserve">
-    <value>This is the first version of Media10, a light-weight media player that supports 45+ file formats.
-
-It includes a playlist system, a drag and drop function so you can directly drop files onto the main screen and a lot of shortcuts.
-
-This application is based on features request, if you would like any features, go to my GitHub page and make a feature request or leave a comment on the Microsoft Store.
-
-If you like this application, please rate it on the Microsoft Store :)</value>
-    <comment>What's new prompt message body</comment>
-  </data>
-  <data name="WhatsNewDialog.Title" xml:space="preserve">
-    <value>What's new in this version</value>
-    <comment>What's new prompt message title</comment>
-  </data>
-  <data name="WhatsNewDialog.PrimaryButtonText" xml:space="preserve">
-    <value>Ok</value>
-    <comment>What's new prompt message primary button text</comment>
-  </data>
   <data name="Settings_GithubDescription.Text" xml:space="preserve">
     <value>This project is open-source and can be found on GitHub.</value>
   </data>

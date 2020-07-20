@@ -12,4 +12,90 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Shell_MediaPlayer.Content" xml:space="preserve">
+    <value>Проигрыватель Windows Media</value>
+    <comment>Navigation view item name for MediaPlayer</comment>
+  </data>
+  <data name="ExceptionSettingsStorageExtensionsFileNameIsNullOrEmpty" xml:space="preserve">
+    <value>Имя файла является недействительным или пустым. Укажите действительное имя файла</value>
+    <comment>File name is null or empty to save file in settings storage extensions</comment>
+  </data>
+  <data name="Settings_Theme.Text" xml:space="preserve">
+    <value>Выбор темы</value>
+    <comment>Choose theme text for Settings</comment>
+  </data>
+  <data name="Settings_Theme_Dark.Content" xml:space="preserve">
+    <value>Темная</value>
+    <comment>Dark theme text for Settings</comment>
+  </data>
+  <data name="Settings_Theme_Default.Content" xml:space="preserve">
+    <value>Windows по умолчанию</value>
+    <comment>Windows default theme text for Settings</comment>
+  </data>
+  <data name="Settings_Theme_Light.Content" xml:space="preserve">
+    <value>Светлый</value>
+    <comment>Light theme text for Settings</comment>
+  </data>
+  <data name="Settings_About.Text" xml:space="preserve">
+    <value>Об этом приложении</value>
+    <comment>About this application title for Settings</comment>
+  </data>
+  <data name="Settings_AboutDescription.Text" xml:space="preserve">
+    <value>Media10, легкий медиаплеер, поддерживающий 45 форматов файлов.</value>
+    <comment>About this application description for Settings</comment>
+  </data>
+  <data name="Settings_Personalization.Text" xml:space="preserve">
+    <value>Персонализация</value>
+    <comment>Personalization text for Settings</comment>
+  </data>
+  <data name="ExceptionEnumToBooleanConverterValueMustBeAnEnum" xml:space="preserve">
+    <value>значение должно быть Enum!</value>
+    <comment>Value must be an Enum in enum to boolean converter</comment>
+  </data>
+  <data name="ExceptionEnumToBooleanConverterParameterMustBeAnEnumName" xml:space="preserve">
+    <value>параметр должен быть имя Enum!</value>
+    <comment>Parameter must be an Enum name in enum to boolean converter</comment>
+  </data>
+  <data name="AppBar_Exit_Button.Label" xml:space="preserve">
+    <value>Близкие сми</value>
+  </data>
+  <data name="AppBar_Open_Button.Label" xml:space="preserve">
+    <value>Открыть</value>
+  </data>
+  <data name="AppBar_Playlist_Button.Label" xml:space="preserve">
+    <value>Список воспроизведения</value>
+  </data>
+  <data name="DragAndDrop_Textblock.Text" xml:space="preserve">
+    <value>Перетащите файлы здесь, чтобы добавить их в список</value>
+  </data>
+  <data name="Delete_Button.Text" xml:space="preserve">
+    <value>Удалить выбранное</value>
+  </data>
+  <data name="Settings_GithubDescription.Text" xml:space="preserve">
+    <value>Этот проект с открытым исходным кодом и может быть найден на GitHub.</value>
+  </data>
+  <data name="Settings_GitHubLink.NavigateUri" xml:space="preserve">
+    <value>https://github.com/Astyr6/Media10</value>
+  </data>
+  <data name="Settings_GitHubLink.Content" xml:space="preserve">
+    <value>Страница GitHub</value>
+  </data>
+  <data name="AppBar_Back_Button.Label" xml:space="preserve">
+    <value>назад</value>
+  </data>
+  <data name="AppBar_Next_Button.Label" xml:space="preserve">
+    <value>Следующая</value>
+  </data>
+  <data name="AppBar_Repeat_Button.Label" xml:space="preserve">
+    <value>Повторять</value>
+  </data>
+  <data name="AppBar_Shuffle_Button.Label" xml:space="preserve">
+    <value>В случайном порядке</value>
+  </data>
+  <data name="Clear_Playlist_Button.Text" xml:space="preserve">
+    <value>Очистить плейлист</value>
+  </data>
+  <data name="Open_File_Button.Text" xml:space="preserve">
+    <value> Открытый файл</value>
+  </data>
 </root>
