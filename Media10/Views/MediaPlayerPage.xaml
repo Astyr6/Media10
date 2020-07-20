@@ -20,7 +20,8 @@
             HorizontalAlignment="Left"
             Background="Transparent"
             DefaultLabelPosition="Right"
-            IsOpen="False">
+            IsOpen="False"
+            OverflowButtonVisibility="Collapsed">
             <AppBarButton
                 x:Uid="AppBar_Open_Button"
                 Click="AppBarButton_Click"
@@ -45,6 +46,43 @@
                     <KeyboardAccelerator Key="P" Modifiers="Control" />
                 </AppBarButton.KeyboardAccelerators>
             </AppBarButton>
+            <AppBarSeparator />
+            <AppBarButton
+                x:Name="BackButton"
+                x:Uid="AppBar_Back_Button"
+                Click="BackButton_Click"
+                Icon="Previous">
+                <AppBarButton.KeyboardAccelerators>
+                    <KeyboardAccelerator Key="P" Modifiers="Shift" />
+                </AppBarButton.KeyboardAccelerators>
+            </AppBarButton>
+            <AppBarButton
+                x:Name="NextButton"
+                x:Uid="AppBar_Next_Button"
+                Click="NextButton_Click"
+                Icon="Next">
+                <AppBarButton.KeyboardAccelerators>
+                    <KeyboardAccelerator Key="N" Modifiers="Shift" />
+                </AppBarButton.KeyboardAccelerators>
+            </AppBarButton>
+            <AppBarToggleButton
+                x:Name="ShuffleButton"
+                x:Uid="AppBar_Shuffle_Button"
+                Click="ShuffleButton_Click"
+                Icon="Shuffle">
+                <AppBarToggleButton.KeyboardAccelerators>
+                    <KeyboardAccelerator Key="N" Modifiers="Shift" />
+                </AppBarToggleButton.KeyboardAccelerators>
+            </AppBarToggleButton>
+            <AppBarToggleButton
+                x:Name="RepeatButton"
+                x:Uid="AppBar_Repeat_Button"
+                Click="RepeatButton_Click"
+                Icon="RepeatAll">
+                <AppBarToggleButton.KeyboardAccelerators>
+                    <KeyboardAccelerator Key="R" Modifiers="Shift" />
+                </AppBarToggleButton.KeyboardAccelerators>
+            </AppBarToggleButton>
         </CommandBar>
         <MediaPlayerElement
             x:Name="mpe"
@@ -131,54 +169,104 @@
 
         <ContentDialog
             x:Name="playlistDialog"
+            Opened="playlistDialog_Opened"
+            PrimaryButtonClick="Button_Click_1"
             PrimaryButtonText="Play"
-            SecondaryButtonText="Cancel">
+            SecondaryButtonText="Cancel" >
             <ContentDialog.TitleTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
                         <SymbolIcon Symbol="List" />
                         <TextBlock Text="  Playlist" />
-                        
+
                     </StackPanel>
                 </DataTemplate>
             </ContentDialog.TitleTemplate>
+
+
             <ScrollViewer>
                 <Grid
                     x:Name="playlistGrid"
                     MinHeight="400"
                     AllowDrop="True">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="auto"/>
-                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
-                    
+
                     <StackPanel
                         x:Name="DragAndDropPormpt"
+                        Grid.Row="1"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center"
-                        Orientation="Vertical" Grid.Row="1">
+                        Orientation="Vertical">
                         <SymbolIcon Foreground="Gray" Symbol="Add" />
                         <TextBlock
                             x:Uid="DragAndDrop_Textblock"
                             HorizontalAlignment="Center"
                             Foreground="Gray" />
                     </StackPanel>
-                    <Button HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource ButtonRevealStyle}" Click="Button_Click" Grid.Row="0">
+                    <StackPanel Orientation="Horizontal">
+                        <Button
+                            Grid.Row="0"
+                            Margin="0,0,5,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Click="Open_File_Playlist_Button_Click"
+                            Style="{StaticResource ButtonRevealStyle}">
                             <StackPanel Orientation="Horizontal">
-                                <SymbolIcon Symbol="Delete" />
-                                <TextBlock x:Uid="Delete_Button"/>
+                                <SymbolIcon Symbol="OpenFile" />
+                                <TextBlock x:Uid="Open_File_Button" />
                             </StackPanel>
                             <Button.KeyboardAccelerators>
-                                <KeyboardAccelerator Key="Delete"/>
+                                <KeyboardAccelerator Key="O" Modifiers="Control" />
                             </Button.KeyboardAccelerators>
                         </Button>
+                        <Button
+                            Grid.Row="0"
+                            Margin="0,0,5,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Click="Button_Click"
+                            Style="{StaticResource ButtonRevealStyle}">
+                            <StackPanel Orientation="Horizontal">
+                                <SymbolIcon Symbol="Cancel" />
+                                <TextBlock x:Uid="Delete_Button" />
+                            </StackPanel>
+                            <Button.KeyboardAccelerators>
+                                <KeyboardAccelerator Key="Delete" />
+                                <KeyboardAccelerator Key="Back" />
+                            </Button.KeyboardAccelerators>
+                        </Button>
+                        <Button
+                            Grid.Row="0"
+                            Margin="0,0,5,0"
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Top"
+                            Click="Clear_Playlist_Button_Click"
+                            Style="{StaticResource ButtonRevealStyle}">
+                            <StackPanel Orientation="Horizontal">
+                                <SymbolIcon Symbol="Delete" />
+                                <TextBlock x:Uid="Clear_Playlist_Button" />
+                            </StackPanel>
+                            <Button.KeyboardAccelerators>
+                                <KeyboardAccelerator Key="Delete" Modifiers="Control,Shift" />
+                            </Button.KeyboardAccelerators>
+                        </Button>
+                    </StackPanel>
+
                     <ListView
                         x:Name="playlistListView"
+                        Grid.Row="1"
+                        Margin="0,10,0,0"
                         AllowDrop="True"
+                        Background="Transparent"
                         CanDragItems="True"
                         CanReorderItems="True"
-                        DragOver="playlistGrid_DragOver" DragLeave="playlistListView_DragLeave"
-                        Drop="playlistGrid_Drop" Grid.Row="1" Margin="0,10,0,0" Background="Transparent"/>
+                        DisplayMemberPath="Name"
+                        DragLeave="playlistListView_DragLeave"
+                        DragOver="playlistGrid_DragOver"
+                        Drop="playlistGrid_Drop" />
                 </Grid>
             </ScrollViewer>
         </ContentDialog>

@@ -7,13 +7,13 @@
     <body>
       <group id="MEDIA10/STRINGS/EN-US/RESOURCES.RESW" datatype="resx">
         <trans-unit id="AppDisplayName" translate="yes" xml:space="preserve">
-          <source>Video10</source>
-          <target state="new">Video10</target>
+          <source>Media10</source>
+          <target state="new">Media10</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Application display name</note>
         </trans-unit>
         <trans-unit id="AppDescription" translate="yes" xml:space="preserve">
-          <source>Video10</source>
-          <target state="new">Video10</target>
+          <source>Media10</source>
+          <target state="new">Media10</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Application description</note>
         </trans-unit>
         <trans-unit id="Shell_MediaPlayer.Content" translate="yes" xml:space="preserve">
@@ -52,19 +52,9 @@
           <note from="MultilingualBuild" annotates="source" priority="2">About this application title for Settings</note>
         </trans-unit>
         <trans-unit id="Settings_AboutDescription.Text" translate="yes" xml:space="preserve">
-          <source>Settings page placeholder text.  Your app description goes here.</source>
-          <target state="new">Settings page placeholder text.  Your app description goes here.</target>
+          <source>Media10, a light-weight media player supporting 45+ file formats.</source>
+          <target state="new">Media10, a light-weight media player supporting 45+ file formats.</target>
           <note from="MultilingualBuild" annotates="source" priority="2">About this application description for Settings</note>
-        </trans-unit>
-        <trans-unit id="Settings_PrivacyTermsLink.Content" translate="yes" xml:space="preserve">
-          <source>Privacy Statement</source>
-          <target state="new">Privacy Statement</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Privacy Statement link content for Settings</note>
-        </trans-unit>
-        <trans-unit id="Settings_PrivacyTermsLink.NavigateUri" translate="yes" xml:space="preserve">
-          <source>https://YourPrivacyUrlGoesHere/</source>
-          <target state="new">https://YourPrivacyUrlGoesHere/</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Here is your Privacy Statement url for Settings</note>
         </trans-unit>
         <trans-unit id="Settings_Personalization.Text" translate="yes" xml:space="preserve">
           <source>Personalization</source>
@@ -100,6 +90,94 @@
         <trans-unit id="Delete_Button.Text" translate="yes" xml:space="preserve">
           <source>Delete selected</source>
           <target state="new">Delete selected</target>
+        </trans-unit>
+        <trans-unit id="FirstRun_Body.Text" translate="yes" xml:space="preserve">
+          <source>Hello user, welcome to Media10, a light-weight media player supporting 45+ file formats.
+More information at https://support.microsoft.com/en-us/help/316992/file-types-supported-by-windows-media-player
+
+This application is based on features request, if you would like any features, go to my GitHub page and make a feature request or leave a comment on the Microsoft Store.
+
+If you like this application, please rate it on the Microsoft Store :)</source>
+          <target state="new">Hello user, welcome to Media10, a light-weight media player supporting 45+ file formats.
+More information at https://support.microsoft.com/en-us/help/316992/file-types-supported-by-windows-media-player
+
+This application is based on features request, if you would like any features, go to my GitHub page and make a feature request or leave a comment on the Microsoft Store.
+
+If you like this application, please rate it on the Microsoft Store :)</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">First use prompt message body</note>
+        </trans-unit>
+        <trans-unit id="FirstRunDialog.Title" translate="yes" xml:space="preserve">
+          <source>Welcome</source>
+          <target state="new">Welcome</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">First use prompt message title</note>
+        </trans-unit>
+        <trans-unit id="FirstRunDialog.PrimaryButtonText" translate="yes" xml:space="preserve">
+          <source>Ok</source>
+          <target state="new">Ok</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">First use prompt message primary button text</note>
+        </trans-unit>
+        <trans-unit id="WhatsNew_Body.Text" translate="yes" xml:space="preserve">
+          <source>This is the first version of Media10, a light-weight media player that supports 45+ file formats.
+
+It includes a playlist system, a drag and drop function so you can directly drop files onto the main screen and a lot of shortcuts.
+
+This application is based on features request, if you would like any features, go to my GitHub page and make a feature request or leave a comment on the Microsoft Store.
+
+If you like this application, please rate it on the Microsoft Store :)</source>
+          <target state="new">This is the first version of Media10, a light-weight media player that supports 45+ file formats.
+
+It includes a playlist system, a drag and drop function so you can directly drop files onto the main screen and a lot of shortcuts.
+
+This application is based on features request, if you would like any features, go to my GitHub page and make a feature request or leave a comment on the Microsoft Store.
+
+If you like this application, please rate it on the Microsoft Store :)</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">What's new prompt message body</note>
+        </trans-unit>
+        <trans-unit id="WhatsNewDialog.Title" translate="yes" xml:space="preserve">
+          <source>What's new in this version</source>
+          <target state="new">What's new in this version</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">What's new prompt message title</note>
+        </trans-unit>
+        <trans-unit id="WhatsNewDialog.PrimaryButtonText" translate="yes" xml:space="preserve">
+          <source>Ok</source>
+          <target state="new">Ok</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">What's new prompt message primary button text</note>
+        </trans-unit>
+        <trans-unit id="Settings_GithubDescription.Text" translate="yes" xml:space="preserve">
+          <source>This project is open-source and can be found on GitHub.</source>
+          <target state="new">This project is open-source and can be found on GitHub.</target>
+        </trans-unit>
+        <trans-unit id="Settings_GitHubLink.NavigateUri" translate="yes" xml:space="preserve">
+          <source>https://github.com/Astyr6/Media10</source>
+          <target state="new">https://github.com/Astyr6/Media10</target>
+        </trans-unit>
+        <trans-unit id="Settings_GitHubLink.Content" translate="yes" xml:space="preserve">
+          <source>GitHub Page</source>
+          <target state="new">GitHub Page</target>
+        </trans-unit>
+        <trans-unit id="AppBar_Back_Button.Label" translate="yes" xml:space="preserve">
+          <source>Previous</source>
+          <target state="new">Previous</target>
+        </trans-unit>
+        <trans-unit id="AppBar_Next_Button.Label" translate="yes" xml:space="preserve">
+          <source>Next</source>
+          <target state="new">Next</target>
+        </trans-unit>
+        <trans-unit id="AppBar_Repeat_Button.Label" translate="yes" xml:space="preserve">
+          <source>Repeat</source>
+          <target state="new">Repeat</target>
+        </trans-unit>
+        <trans-unit id="AppBar_Shuffle_Button.Label" translate="yes" xml:space="preserve">
+          <source>Shuffle</source>
+          <target state="new">Shuffle</target>
+        </trans-unit>
+        <trans-unit id="Clear_Playlist_Button.Text" translate="yes" xml:space="preserve">
+          <source>Clear playlist</source>
+          <target state="new">Clear playlist</target>
+        </trans-unit>
+        <trans-unit id="Open_File_Button.Text" translate="yes" xml:space="preserve">
+          <source> Open File</source>
+          <target state="new"> Open File</target>
         </trans-unit>
       </group>
     </body>

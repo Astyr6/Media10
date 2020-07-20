@@ -118,11 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AppDisplayName" xml:space="preserve">
-    <value>Video10</value>
+    <value>Media10</value>
     <comment>Application display name</comment>
   </data>
   <data name="AppDescription" xml:space="preserve">
-    <value>Video10</value>
+    <value>Media10</value>
     <comment>Application description</comment>
   </data>
   <data name="Shell_MediaPlayer.Content" xml:space="preserve">
@@ -154,16 +154,8 @@
     <comment>About this application title for Settings</comment>
   </data>
   <data name="Settings_AboutDescription.Text" xml:space="preserve">
-    <value>Settings page placeholder text.  Your app description goes here.</value>
+    <value>Media10, a light-weight media player supporting 45+ file formats.</value>
     <comment>About this application description for Settings</comment>
-  </data>
-  <data name="Settings_PrivacyTermsLink.Content" xml:space="preserve">
-    <value>Privacy Statement</value>
-    <comment>Privacy Statement link content for Settings</comment>
-  </data>
-  <data name="Settings_PrivacyTermsLink.NavigateUri" xml:space="preserve">
-    <value>https://YourPrivacyUrlGoesHere/</value>
-    <comment>Here is your Privacy Statement url for Settings</comment>
   </data>
   <data name="Settings_Personalization.Text" xml:space="preserve">
     <value>Personalization</value>
@@ -191,5 +183,67 @@
   </data>
   <data name="DragAndDrop_Textblock.Text" xml:space="preserve">
     <value>Drag files here to add them to the list</value>
+  </data>
+  <data name="FirstRun_Body.Text" xml:space="preserve">
+    <value>Hello user, welcome to Media10, a light-weight media player supporting 45+ file formats.
+More information at https://support.microsoft.com/en-us/help/316992/file-types-supported-by-windows-media-player
+
+This application is based on features request, if you would like any features, go to my GitHub page and make a feature request or leave a comment on the Microsoft Store.
+
+If you like this application, please rate it on the Microsoft Store :)</value>
+    <comment>First use prompt message body</comment>
+  </data>
+  <data name="FirstRunDialog.Title" xml:space="preserve">
+    <value>Welcome</value>
+    <comment>First use prompt message title</comment>
+  </data>
+  <data name="FirstRunDialog.PrimaryButtonText" xml:space="preserve">
+    <value>Ok</value>
+    <comment>First use prompt message primary button text</comment>
+  </data>
+  <data name="WhatsNew_Body.Text" xml:space="preserve">
+    <value>This is the first version of Media10, a light-weight media player that supports 45+ file formats.
+
+It includes a playlist system, a drag and drop function so you can directly drop files onto the main screen and a lot of shortcuts.
+
+This application is based on features request, if you would like any features, go to my GitHub page and make a feature request or leave a comment on the Microsoft Store.
+
+If you like this application, please rate it on the Microsoft Store :)</value>
+    <comment>What's new prompt message body</comment>
+  </data>
+  <data name="WhatsNewDialog.Title" xml:space="preserve">
+    <value>What's new in this version</value>
+    <comment>What's new prompt message title</comment>
+  </data>
+  <data name="WhatsNewDialog.PrimaryButtonText" xml:space="preserve">
+    <value>Ok</value>
+    <comment>What's new prompt message primary button text</comment>
+  </data>
+  <data name="Settings_GithubDescription.Text" xml:space="preserve">
+    <value>This project is open-source and can be found on GitHub.</value>
+  </data>
+  <data name="Settings_GitHubLink.Content" xml:space="preserve">
+    <value>GitHub Page</value>
+  </data>
+  <data name="Settings_GitHubLink.NavigateUri" xml:space="preserve">
+    <value>https://github.com/Astyr6/Media10</value>
+  </data>
+  <data name="AppBar_Back_Button.Label" xml:space="preserve">
+    <value>Previous</value>
+  </data>
+  <data name="AppBar_Next_Button.Label" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="AppBar_Repeat_Button.Label" xml:space="preserve">
+    <value>Repeat</value>
+  </data>
+  <data name="AppBar_Shuffle_Button.Label" xml:space="preserve">
+    <value>Shuffle</value>
+  </data>
+  <data name="Clear_Playlist_Button.Text" xml:space="preserve">
+    <value>Clear playlist</value>
+  </data>
+  <data name="Open_File_Button.Text" xml:space="preserve">
+    <value> Open File</value>
   </data>
 </root>
