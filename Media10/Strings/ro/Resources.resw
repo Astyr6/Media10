@@ -98,4 +98,13 @@
   <data name="Open_File_Button.Text" xml:space="preserve">
     <value> Deschidere fișier</value>
   </data>
+  <data name="Settings_PrivacyPolicyDescription.Text" xml:space="preserve">
+    <value>Politica de confidențialitate pentru Media10.</value>
+  </data>
+  <data name="Settings_PrivacyPolicyLink.Content" xml:space="preserve">
+    <value>Linkul Politicii de confidențialitate</value>
+  </data>
+  <data name="Settings_PrivacyPolicyLink.NavigateUri" xml:space="preserve">
+    <value>https://pastebin.com/6wH1Nn3f</value>
+  </data>
 </root>

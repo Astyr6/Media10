@@ -124,8 +124,21 @@
           <target state="needs-review-translation" state-qualifier="mt-suggestion">Hreinsa lagalista</target>
         </trans-unit>
         <trans-unit id="Open_File_Button.Text" translate="yes" xml:space="preserve">
-          <source> Open File</source>
+          <source> Open Files</source>
           <target state="needs-review-translation" state-qualifier="mt-suggestion"> Opna skrá</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="Settings_PrivacyPolicyDescription.Text" translate="yes" xml:space="preserve">
+          <source>Privacy policy for Media10.</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Persónuverndarstefna fyrir Media10.</target>
+        </trans-unit>
+        <trans-unit id="Settings_PrivacyPolicyLink.Content" translate="yes" xml:space="preserve">
+          <source>Privacy Policy Link</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">Tenging persónuverndarstefnu</target>
+        </trans-unit>
+        <trans-unit id="Settings_PrivacyPolicyLink.NavigateUri" translate="yes" xml:space="preserve">
+          <source>https://pastebin.com/6wH1Nn3f</source>
+          <target state="needs-review-translation" state-qualifier="mt-suggestion">https://pastebin.com/6wH1Nn3f</target>
         </trans-unit>
       </group>
     </body>

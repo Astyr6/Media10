@@ -98,4 +98,13 @@
   <data name="Open_File_Button.Text" xml:space="preserve">
     <value>打开文件</value>
   </data>
+  <data name="Settings_PrivacyPolicyDescription.Text" xml:space="preserve">
+    <value>Media10 的隐私政策。</value>
+  </data>
+  <data name="Settings_PrivacyPolicyLink.Content" xml:space="preserve">
+    <value>隐私权政策链接</value>
+  </data>
+  <data name="Settings_PrivacyPolicyLink.NavigateUri" xml:space="preserve">
+    <value>https://pastebin.com/6wH1Nn3f</value>
+  </data>
 </root>

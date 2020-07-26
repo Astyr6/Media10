@@ -98,4 +98,13 @@
   <data name="Open_File_Button.Text" xml:space="preserve">
     <value> Bestand openen</value>
   </data>
+  <data name="Settings_PrivacyPolicyDescription.Text" xml:space="preserve">
+    <value>Privacybeleid voor Media10.</value>
+  </data>
+  <data name="Settings_PrivacyPolicyLink.Content" xml:space="preserve">
+    <value>Koppeling naar privacybeleid</value>
+  </data>
+  <data name="Settings_PrivacyPolicyLink.NavigateUri" xml:space="preserve">
+    <value>https://pastebin.com/6wH1Nn3f</value>
+  </data>
 </root>
